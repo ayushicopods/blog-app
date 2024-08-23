@@ -1,24 +1,23 @@
 from django.shortcuts import render
 from rest_framework import generics
-from rest_framework.permissions import AllowAny
-from .models import  BlogPost, Publisher, BlogLikedByUser
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from .models import  BlogPost, BlogLikedByUser
 from django.contrib.auth.models import User
-from .serializers import  BlogPostSerializers, PublisherSerializers, BlogLikesByUserSerializers, RegisterSerializer
-
+from .serializers import  BlogPostSerializers, BlogLikesByUserSerializers, RegisterSerializer
 # Create your views here.
 class BlogPostListCreate(generics.ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializers
+
 class BlogPostRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializers
     lookup_field = 'pk'
 
-class PublisherListCreate(generics.ListCreateAPIView):
-    queryset = Publisher.objects.all()
-    serializer_class = PublisherSerializers
-
 class BlogLikedByUserListCreate(generics.ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
     serializer_class = BlogLikesByUserSerializers
 
     def get_queryset(self):
