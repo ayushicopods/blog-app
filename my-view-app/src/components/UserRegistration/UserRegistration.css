@@ -1,0 +1,76 @@
+.registration-card {
+  width: 75%;
+  height: 66.66%;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #69616f;
+}
+
+.registration-card > div:nth-child(1) {
+  width: 50%;
+}
+
+.registration-card > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  flex: 1;
+}
+
+.registration-card-right > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.registration-card-right > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.registration-card-right > div:nth-child(3) {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: end;
+  border-radius: 0.5rem;
+}
+
+.registration-card-right button {
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.registration-card-right > div:nth-child(3) > button:nth-child(2) {
+  background-color: #50c8fe;
+  color: white;
+}
+
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.custom-input div {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.registration-card-right > div:first-of-type > p:first-of-type {
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.registration-card-right > div:first-of-type > p:nth-child(2) {
+  font-size: 0.875rem;
+}

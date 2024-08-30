@@ -1,0 +1,28 @@
+/* assets/main.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+input {
+  border: none;
+  padding: 4px;
+}
+
+input:focus {
+  border: 0px;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
